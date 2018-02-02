@@ -1,0 +1,44 @@
+/* 
+    Simple structural shadow
+    Author: SMPLBLCK/sebamza17
+*/
+
+.structural-shadow {
+
+  .structural-shadow--opacity (@iterations);
+  position: relative;
+
+  &:after {
+    transition: @transition-base-rule;
+    opacity: 0.25;
+  }
+
+  // Opacity iterations
+  @iterations: 20;
+  .structural-shadow--opacity (@i) when (@i > 0) {
+    &.structural-shadow--opacity-@{i} {
+      &:after {
+        opacity: ~".@{i}";
+      }
+    }
+    .structural-shadow--opacity(@i - 1);
+  }
+
+  // Variation => Bottom shadow
+  &.structural-shadow--bottom {
+
+    &:after {
+      content: " ";
+      position: absolute;
+      z-index: 0;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 20px;
+      background: url('images/shadow-bottom.png') center center no-repeat;
+      background-size: 100% 100%;
+    }
+
+  }
+
+}

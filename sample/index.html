@@ -23,187 +23,301 @@
  THE SOFTWARE.
 -->
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="dashboard sample app">
-    <meta name="author" content="Sebastian Sdorra">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="dashboard sample app">
+  <meta name="author" content="Sebastian Sdorra">
 
-    <title>Dashboard</title>
+  <title>Dashboard</title>
 
-    <!-- build:css css/sample.min.css -->
-    <!-- Bootstrap core CSS -->
-    <link href="components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+  <!-- build:css css/sample.min.css -->
+  <!-- Bootstrap core CSS -->
+  <link href="components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
 
-    <!-- dashboard style -->
-    <link href="../dist/angular-dashboard-framework.css" rel="stylesheet">
-    <link href="widgets/clock/src/style.css" rel="stylesheet">
-    <link href="widgets/travis/dist/adf-widget-travis.css" rel="stylesheet">
-    <!-- endbuild -->
+  <!-- dashboard style -->
+  <link href="../dist/angular-dashboard-framework.css" rel="stylesheet">
+  <link href="widgets/clock/src/style.css" rel="stylesheet">
+  <link href="widgets/travis/dist/adf-widget-travis.css" rel="stylesheet">
+  <link href="../dist/styles.css" rel="stylesheet">
+  <!-- end build -->
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
 
-    <!--[if lte IE 8]>
-      <script>
-        document.createElement('adf-dashboard');
-        document.createElement('adf-widget');
-        document.createElement('adf-widget-content');
-        document.createElement('adf-dashboard-row');
-        document.createElement('adf-dashboard-column');
+  <!--[if lte IE 8]>
+  <script>
+    document.createElement('adf-dashboard');
+    document.createElement('adf-widget');
+    document.createElement('adf-widget-content');
+    document.createElement('adf-dashboard-row');
+    document.createElement('adf-dashboard-column');
 
-        document.createElement('highchart');
-      </script>
-    <![endif]-->
+    document.createElement('highchart');
+  </script>
+  <![endif]-->
 
-    <!-- inlince css -->
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-      }
-      /* fixe for modal-backdrop*/
-      .modal-backdrop {
-        bottom: 0;
-        /* some fixes appear to use this, too: */
-        position: fixed;
-      }
-    </style>
-  </head>
+  <!-- inlince css -->
+  <style type="text/css">
 
-  <body ng-app="sample">
+    /* fixe for modal-backdrop*/
+    .modal-backdrop {
+      bottom: 0;
+      /* some fixes appear to use this, too: */
+      position: fixed;
+    }
+  </style>
+</head>
 
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container" ng-controller="navigationCtrl">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" ng-click="toggleNav()">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#/sample-01">ADF</a>
+<body ng-app="sample">
+
+<div class="width-full height-full bg-color-white-darken-2 flex-wrapper">
+  <!--sidebar-->
+  <div class="optigo-sidebar__container">
+
+      <!--Score number-->
+      <div class="width-full padding-horizontal-quarter flex-wrapper flex-wrapper--justify-center padding-vertical-full">
+        <div class="score-number">80%</div>
+      </div>
+      <!--end score number-->
+    <div class="optigo-sidebar__links-container">
+
+      <ul class="width-full">
+        <li>
+          <a href="#">
+            <i class="fa fa-dashboard fa-lg"></i>
+            Network Health
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="fa fa-gift fa-lg"></i>
+            System
+            <span class="arrow"></span>
+          </a>
+        </li>
+
+        <ul>
+          <li class="active"><a href="#">Unit Status</a></li>
+          <li><a href="#">Config</a></li>
+          <li><a href="#">Lasers/Redundancy</a></li>
+          <li><a href="#">Bandwidth</a></li>
+          <li><a href="#">Firmware</a></li>
+          <li><a href="#">RSSI</a></li>
+        </ul>
+
+        <li>
+          <a href="#">
+            <i class="fa fa-globe fa-lg"></i>
+            Edge Switches
+            <span class="arrow"></span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="fa fa-globe fa-lg"></i>
+            Ports
+            <span class="arrow"></span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="fa fa-globe fa-lg"></i>
+            VLANs
+            <span class="arrow"></span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="fa fa-globe fa-lg"></i>
+            Devices
+            <span class="arrow"></span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="fa fa-globe fa-lg"></i>
+            Security
+            <span class="arrow"></span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="fa fa-globe fa-lg"></i>
+            Network Topology
+            <span class="arrow"></span>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+  <!--end sidebar-->
+
+  <div class="width-full">
+    <!--nav-->
+    <div class="top-nav optigo-navbar__container">
+      <div class="container padding-horizontal-full">
+        <div class=" flex-wrapper flex-wrapper--justify-space-between">
+          <div class="nav-logo flex-wrapper flex-wrapper--align-center">
+            <img src="images/optigo-logo.svg" alt="optigo-logo">
+          </div>
+          <div class="flex-wrapper">
+            <div class="padding-right-full flex-wrapper flex-wrapper--align-center">
+              Alerts
+              <span class="ion-email font-size-xxl padding-left-half"></span>
+            </div>
+            <div class="flex-wrapper flex-wrapper--align-center">
+              Logout
+              <span class="ion-log-out font-size-xxl padding-left-half"></span>
+            </div>
+          </div>
         </div>
-        <div uib-collapse="navCollapsed" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li ng-class="navClass('sample/01')">
-              <a href="#/sample/01">Sample 01</a>
-            </li>
-            <li ng-class="navClass('sample/02')">
-              <a href="#/sample/02">Sample 02</a>
-            </li>
-            <li ng-class="navClass('sample/03')">
-              <a href="#/sample/03">Sample 03</a>
-            </li>
-            <li ng-class="navClass('sample/04')">
-              <a href="#/sample/04">Sample 04</a>
-            </li>
-            <li ng-class="navClass('sample/05')">
-              <a href="#/sample/05">Sample 05</a>
-            </li>
-          </ul>
-        </div><!--/.nav-collapse -->
       </div>
     </div>
 
-    <div class="container">
+    <!--<div class="navbar navbar--white navbar-fixed-top margin-bottom-double">-->
+    <!--<div class="container" ng-controller="navigationCtrl">-->
+    <!--<div class="navbar-header">-->
+    <!--<button type="button" class="navbar-toggle" ng-click="toggleNav()">-->
+    <!--<span class="sr-only">Toggle navigation</span>-->
+    <!--<span class="icon-bar"></span>-->
+    <!--<span class="icon-bar"></span>-->
+    <!--<span class="icon-bar"></span>-->
+    <!--</button>-->
+    <!--<a class="navbar-brand" href="#/sample-01">ADF</a>-->
+    <!--</div>-->
+    <!--<div uib-collapse="navCollapsed" class="collapse navbar-collapse">-->
+    <!--<ul class="nav navbar-nav">-->
+    <!--<li ng-class="navClass('sample/01')">-->
+    <!--<a href="#/sample/01">Sample 01</a>-->
+    <!--</li>-->
+    <!--<li ng-class="navClass('sample/02')">-->
+    <!--<a href="#/sample/02">Sample 02</a>-->
+    <!--</li>-->
+    <!--<li ng-class="navClass('sample/03')">-->
+    <!--<a href="#/sample/03">Sample 03</a>-->
+    <!--</li>-->
+    <!--<li ng-class="navClass('sample/04')">-->
+    <!--<a href="#/sample/04">Sample 04</a>-->
+    <!--</li>-->
+    <!--<li ng-class="navClass('sample/05')">-->
+    <!--<a href="#/sample/05">Sample 05</a>-->
+    <!--</li>-->
+    <!--</ul>-->
+    <!--</div>&lt;!&ndash;/.nav-collapse &ndash;&gt;-->
+    <!--</div>-->
 
-      <div ng-view />
+    <!--end nav-->
 
+    <!--dashboard container-->
+    <div class="container padding-top-double padding-horizontal-full">
+      <div ng-view/>
     </div>
 
-    <!-- build:js js/angular.min.js -->
-    <script type="text/javascript" src="components/angular/angular.js"></script>
-    <!-- endbuild -->
+  </div>
+  <!--end dashboard container-->
+</div>
 
-    <!-- build:js js/angular-route.min.js -->
-    <script type="text/javascript" src="components/angular-route/angular-route.js"></script>
-    <!-- endbuild -->
+<!-- build:js js/angular.min.js -->
+<script type="text/javascript" src="components/angular/angular.js"></script>
+<!-- endbuild -->
 
-    <!-- build:js js/sample.min.js -->
-    <!-- Sortable -->
-    <script type="text/javascript" src="components/Sortable/Sortable.js"></script>
+<!-- build:js js/angular-route.min.js -->
+<script type="text/javascript" src="components/angular-route/angular-route.js"></script>
+<!-- endbuild -->
 
-    <!-- angular-bootstrap -->
-    <script type="text/javascript" src="components/angular-bootstrap/ui-bootstrap.js"></script>
-    <script type="text/javascript" src="components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<!-- build:js js/sample.min.js -->
+<!-- Sortable -->
+<script type="text/javascript" src="components/Sortable/Sortable.js"></script>
 
-    <!-- scripts -->
-    <script type="text/javascript" src="../src/scripts/adf.module.js"></script>
-    <script type="text/javascript" src="../src/scripts/adf.locale.module.js"></script>
-    <script type="text/javascript" src="../src/scripts/adf.locale.constants.js"></script>
-    <script type="text/javascript" src="../src/scripts/dashboard.provider.js"></script>
-    <script type="text/javascript" src="../src/scripts/services/adf-utils.service.js"></script>
-    <script type="text/javascript" src="../src/scripts/services/widget.service.js"></script>
-    <script type="text/javascript" src="../src/scripts/services/adf-dashboard.service.js"></script>
-    <script type="text/javascript" src="../src/scripts/services/adf-structure-preview.service.js"></script>
-    <script type="text/javascript" src="../src/scripts/filters/adf-order-by-object-key.filter.js"></script>
-    <script type="text/javascript" src="../src/scripts/directives/adf-widget-content.directive.js"></script>
-    <script type="text/javascript" src="../src/scripts/directives/adf-widget.directive.js"></script>
-    <script type="text/javascript" src="../src/scripts/directives/adf-dashboard.directive.js"></script>
-    <script type="text/javascript" src="../src/scripts/directives/adf-structure-preview.directive.js"></script>
-    <script type="text/javascript" src="../src/scripts/directives/adf-dashboard-column.directive.js"></script>
-    <script type="text/javascript" src="../src/scripts/directives/adf-dashboard-row.directive.js"></script>
+<!-- angular-bootstrap -->
+<script type="text/javascript" src="components/angular-bootstrap/ui-bootstrap.js"></script>
+<script type="text/javascript" src="components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 
-    <!-- local storage -->
-    <script type="text/javascript" src="components/angular-local-storage/dist/angular-local-storage.js"></script>
+<!-- scripts -->
+<script type="text/javascript" src="../src/scripts/adf.module.js"></script>
+<script type="text/javascript" src="../src/scripts/adf.locale.module.js"></script>
+<script type="text/javascript" src="../src/scripts/adf.locale.constants.js"></script>
+<script type="text/javascript" src="../src/scripts/dashboard.provider.js"></script>
+<script type="text/javascript" src="../src/scripts/services/adf-utils.service.js"></script>
+<script type="text/javascript" src="../src/scripts/services/widget.service.js"></script>
+<script type="text/javascript" src="../src/scripts/services/adf-dashboard.service.js"></script>
+<script type="text/javascript" src="../src/scripts/services/adf-structure-preview.service.js"></script>
+<script type="text/javascript" src="../src/scripts/filters/adf-order-by-object-key.filter.js"></script>
+<script type="text/javascript" src="../src/scripts/directives/adf-widget-content.directive.js"></script>
+<script type="text/javascript" src="../src/scripts/directives/adf-widget.directive.js"></script>
+<script type="text/javascript" src="../src/scripts/directives/adf-dashboard.directive.js"></script>
+<script type="text/javascript" src="../src/scripts/directives/adf-structure-preview.directive.js"></script>
+<script type="text/javascript" src="../src/scripts/directives/adf-dashboard-column.directive.js"></script>
+<script type="text/javascript" src="../src/scripts/directives/adf-dashboard-row.directive.js"></script>
 
-    <!-- sample -->
-    <script type="text/javascript" src="scripts/sample.js"></script>
-    <script type="text/javascript" src="scripts/sample-01.js"></script>
-    <script type="text/javascript" src="scripts/sample-02.js"></script>
-    <script type="text/javascript" src="scripts/sample-03.js"></script>
-    <script type="text/javascript" src="scripts/sample-04.js"></script>
-    <script type="text/javascript" src="scripts/sample-05.js"></script>
+<!-- local storage -->
+<script type="text/javascript" src="components/angular-local-storage/dist/angular-local-storage.js"></script>
 
-    <!-- structures -->
-    <script type="text/javascript" src="structures/base/src/base.js"></script>
+<!-- sample -->
+<script type="text/javascript" src="scripts/sample.js"></script>
+<script type="text/javascript" src="scripts/sample-01.js"></script>
+<script type="text/javascript" src="scripts/sample-02.js"></script>
+<script type="text/javascript" src="scripts/sample-03.js"></script>
+<script type="text/javascript" src="scripts/sample-04.js"></script>
+<script type="text/javascript" src="scripts/sample-05.js"></script>
 
-    <!-- news widget -->
-    <script type="text/javascript" src="widgets/news/dist/adf-widget-news.js"></script>
+<!-- structures -->
+<script type="text/javascript" src="structures/base/src/base.js"></script>
 
-    <!-- weather widget -->
-    <script type="text/javascript" src="widgets/weather/src/weather.js"></script>
+<!-- news widget -->
+<script type="text/javascript" src="widgets/news/dist/adf-widget-news.js"></script>
 
-    <!-- linklist widget -->
-    <script type="text/javascript" src="widgets/linklist/src/linklist.js"></script>
+<!-- weather widget -->
+<script type="text/javascript" src="widgets/weather/src/weather.js"></script>
 
-    <!-- markdown widget -->
-    <script type="text/javascript" src="widgets/markdown/components/showdown/src/showdown.js"></script>
-    <script type="text/javascript" src="widgets/markdown/components/angular-markdown-directive/markdown.js"></script>
-    <script type="text/javascript" src="widgets/markdown/src/markdown.js"></script>
+<!-- linklist widget -->
+<script type="text/javascript" src="widgets/linklist/src/linklist.js"></script>
 
-    <!-- randommsg widget -->
-    <script type="text/javascript" src="widgets/randommsg/src/randommsg.js"></script>
+<!-- markdown widget -->
+<script type="text/javascript" src="widgets/markdown/components/showdown/src/showdown.js"></script>
+<script type="text/javascript" src="widgets/markdown/components/angular-markdown-directive/markdown.js"></script>
+<script type="text/javascript" src="widgets/markdown/src/markdown.js"></script>
 
-    <!-- github widget -->
-    <script type="text/javascript" src="widgets/github/components/Chart.js/Chart.js"></script>
-    <script type="text/javascript" src="widgets/github/components/angular-chart.js/dist/angular-chart.js"></script>
-    <script type="text/javascript" src="widgets/github/src/github.js"></script>
-    <script type="text/javascript" src="widgets/github/src/service.js"></script>
-    <script type="text/javascript" src="widgets/github/src/author.controller.js"></script>
-    <script type="text/javascript" src="widgets/github/src/commits.controller.js"></script>
-    <script type="text/javascript" src="widgets/github/src/history.controller.js"></script>
-    <script type="text/javascript" src="widgets/github/src/issues.controller.js"></script>
-    <script type="text/javascript" src="widgets/github/src/events.controller.js"></script>
+<!-- randommsg widget -->
+<script type="text/javascript" src="widgets/randommsg/src/randommsg.js"></script>
 
-    <!-- version widget -->
-    <script type="text/javascript" src="widgets/version/src/version.js"></script>
+<!-- github widget -->
+<script type="text/javascript" src="widgets/github/components/Chart.js/Chart.js"></script>
+<script type="text/javascript" src="widgets/github/components/angular-chart.js/dist/angular-chart.js"></script>
+<script type="text/javascript" src="widgets/github/src/github.js"></script>
+<script type="text/javascript" src="widgets/github/src/service.js"></script>
+<script type="text/javascript" src="widgets/github/src/author.controller.js"></script>
+<script type="text/javascript" src="widgets/github/src/commits.controller.js"></script>
+<script type="text/javascript" src="widgets/github/src/history.controller.js"></script>
+<script type="text/javascript" src="widgets/github/src/issues.controller.js"></script>
+<script type="text/javascript" src="widgets/github/src/events.controller.js"></script>
 
-    <!-- clock widget -->
-    <script type="text/javascript" src="widgets/clock/components/moment/moment.js"></script>
-    <script type="text/javascript" src="widgets/clock/src/clock.js"></script>
+<!-- version widget -->
+<script type="text/javascript" src="widgets/version/src/version.js"></script>
 
-    <!-- travis widget -->
-    <script type="text/javascript" src="widgets/travis/components/angular-md5/angular-md5.js"></script>
-    <script type="text/javascript" src="widgets/travis/dist/adf-widget-travis.js"></script>
+<!-- clock widget -->
+<script type="text/javascript" src="widgets/clock/components/moment/moment.js"></script>
+<script type="text/javascript" src="widgets/clock/src/clock.js"></script>
 
-    <!-- inject:js -->
-    <!-- endinject -->
+<!-- travis widget -->
+<script type="text/javascript" src="widgets/travis/components/angular-md5/angular-md5.js"></script>
+<script type="text/javascript" src="widgets/travis/dist/adf-widget-travis.js"></script>
 
-    <!-- endbuild -->
-  </body>
+<!-- inject:js -->
+<!-- endinject -->
+
+<!-- endbuild -->
+</body>
 </html>

@@ -1,0 +1,91 @@
+/*
+    Base file for all styles - Contains variables, mixins and base css
+    Author: SMPLBLCK/sebamza17
+*/
+
+/*--- Global Vars ---*/
+
+// [Screen] - Breakpoints
+@breakpoint-xxs: 320px;
+@breakpoint-xs: 480px;
+@breakpoint-s: 768px;
+@breakpoint-m: 993px;
+@breakpoint-m--1: 1024px;
+@breakpoint-l: 1200px;
+@breakpoint-l--1: 1280px;
+@breakpoint-l--2: 1440px;
+@breakpoint-xl: 1600px;
+
+// [Structure] - Margin and padding sizes
+@margin-width: 30px;
+@padding-width: 30px;
+
+// [Fonts] - Families
+@font-family-base: "Lato", sans-serif !important;
+@font-weight-base: 300;
+@font-color-base: #444;
+@font-size-base: 62.5%;
+@font-placeholder-color: #808080;
+
+// [Colors] - Brand
+@color-brand-green: #A3BD31;
+@color-brand-red: #C13552;
+@color-brand-yellow: #E5B100;
+@color-brand-blue: #00517B;
+
+// [Colors] - Generics
+@color-generic-blue: #3AA1FF;
+@color-generic-orange: #FF7E3A;
+@color-generic-green: #78FF53;
+@color-generic-red: #C32026;
+
+// [Colors] - Generic
+@color-social-facebook: #235999;
+@color-social-twitter: #1DA1F2;
+@color-social-instagram: #262626;
+@color-social-youtube: #E62117;
+@color-social-vimeo: #00ADEF;
+
+// [Colors] - Backgrounds
+@color-main-background: white;
+
+// [Transitions]
+@transition-base-rule: all 400ms ease;
+
+/*--- end Global Vars ---*/
+
+/*--- Inits ---*/
+@import "inits.less";
+
+/*--- Base (Global helpers) ---*/
+@import "base/backgrounds.less";
+@import "base/buttons.less";
+@import "base/flex.less";
+@import "base/fonts.less";
+@import "base/guards.less";
+@import "base/helpers.less";
+
+/*--- Common (Element helpers) ---*/
+@import "common/structural-shadow.less";
+
+/*--- Components ---*/
+@import "components/card.less";
+@import "components/horizontal-separator.less";
+@import "components/landing.less";
+@import "components/spinner.less";
+@import "components/height-containers.less";
+
+/*--- Views ---*/
+@import "views/preferences.less";
+@import "optigo/card-containers.less";
+@import "optigo/optigo-theme__panel.less";
+@import "optigo/optigo-navbar.less";
+
+/*--- ShameCSS - Credits to CSSwizardry ---*/
+@import "shame.less";
+
+/*--- Playground imports (Any .less file that contains external styles, not from Classify itself) ---*/
+@import "playground/theme-test.less";
+@import "playground/tests.less";
+@import "playground/wispro.less";
+

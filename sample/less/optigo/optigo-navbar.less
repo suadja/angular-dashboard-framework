@@ -1,0 +1,74 @@
+//Navbar
+.optigo-navbar__container {
+  .margin-bottom-full;
+  position: fixed;
+  top: 0;
+  right:0;
+  z-index: 100;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+}
+
+//Logo
+.nav-logo {
+  height: 30px;
+  & img {
+    max-width: 200px;
+    height: 100%;
+  }
+}
+
+.top-nav {
+  .bg-color-white;
+  .padding-vertical-half;
+
+}
+
+//sidenav links
+.sidenav-list {
+  a {
+    color: white;
+    display: block;
+    .padding-vertical-quarter;
+  }
+  .padding-horizontal-full;
+}
+
+
+//Sidenav
+
+.optigo-sidebar__container {
+  width: 250px;
+  background-color: @color-brand-blue;
+
+  .optigo-sidebar__links-container {
+
+    display: flex;
+
+    * > a {
+      color: white;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+      margin: initial;
+      padding-left: 0;
+
+      li {
+        .padding-vertical-quarter;
+        padding-left: 0;
+        .padding-horizontal-half;
+        width: 100%;
+      }
+    }
+
+    ul > ul {
+      background-color: darken(@color-brand-blue, 10%);
+      width: 100%;
+      padding-left: 0;
+    }
+  }
+}
+
+//end Sidenav

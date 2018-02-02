@@ -1,0 +1,104 @@
+/*
+    Base flex wrapper
+    Date: 10/04/2017, 23:51
+    Author: SMPLBLCK/sebamza17
+*/
+
+/*--- Wrapper applicable classes ---*/
+.flex-wrapper {
+  display: flex;
+
+  // Variation => Align: center (Vertically aligns children)
+  &.flex-wrapper--align-center {
+    align-items: center;
+  }
+  // Variation => Align: start (All childrens on top of wrapper)
+  &.flex-wrapper--align-start {
+    align-items: flex-start;
+  }
+  // Variation => Align: end (All childrens on bottom of wrapper)
+  &.flex-wrapper--align-end {
+    align-items: flex-end;
+  }
+  // Variation => Align: stretch (All childrens of the same height)
+  &.flex-wrapper--align-stretch {
+    align-items: stretch;
+  }
+  // Variation => Align: baseline (All childrens aligned on their baseline)
+  &.flex-wrapper--align-baseline {
+    align-items: baseline;
+  }
+
+  // Variation => Justify: center (Horizontally centers children)
+  &.flex-wrapper--justify-center {
+    justify-content: center;
+  }
+  // Variation => Justify: start (Left justification for children)
+  &.flex-wrapper--justify-start {
+    justify-content: flex-start;
+  }
+  // Variation => Justify: end (Right justification for children)
+  &.flex-wrapper--justify-end {
+    justify-content: flex-end;
+  }
+  // Variation => Justify: space-between (Space between childrens)
+  &.flex-wrapper--justify-space-between {
+    justify-content: space-between;
+  }
+  // Variation => Justify: space-around (Space around childrens)
+  &.flex-wrapper--justify-space-around {
+    justify-content: space-around;
+  }
+
+  // Variation => Wrap (wrap children if they can overflow this wrapper)
+  &.flex-wrapper--wrap {
+    flex-wrap: wrap;
+  }
+  // Variation => Wrap: reverse (wrap children if they can overflow this wrapper, reverse order)
+  &.flex-wrapper--wrap-reverse {
+    flex-wrap: wrap-reverse;
+  }
+  // Variation => Wrap: nowrap (not allow children to wrap)
+  &.flex-wrapper--wrap-none {
+    flex-wrap: nowrap;
+  }
+
+  // Variation => Direction: column (vertically direct childrens)
+  &.flex-wrapper--direction-column {
+    flex-direction: column;
+  }
+  // Variation => Direction: column reverse (vertically direct childrens, backwards order)
+  &.flex-wrapper--direction-column-reverse {
+    flex-direction: column-reverse;
+  }
+  // Variation => Direction: row (horizontally direct children)
+  &.flex-wrapper--direction-row {
+    flex-direction: row;
+  }
+  // Variation => Direction: row (horizontally direct children, backwards order)
+  &.flex-wrapper--direction-row-reverse {
+    flex-direction: row-reverse;
+  }
+
+}
+
+/*--- end Wrapper applicable classes ---*/
+
+/*--- Item applicable classes ---*/
+.flex-item--shrink-0 {
+  flex-shrink: 0;
+}
+
+flex-item--shrink-1{
+  flex-shrink: 1;
+};
+
+.flex-item--grow-0 {
+  flex-grow: 0;
+}
+
+flex-item--grow-1{
+  flex-grow: 1;
+};
+
+/*--- end Item applicable classes ---*/

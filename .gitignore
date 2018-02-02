@@ -1,5 +1,6 @@
 # npm
 /node_modules/
+/sample/node_modules
 
 # bower
 /sample/components/

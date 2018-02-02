@@ -1,0 +1,103 @@
+/* 
+    Created on : 01/08/2016, 12:59:46
+    Author     : SMPLBLCK/sebamza17
+*/
+
+/*---- Questions ----*/
+.question {
+
+  //Status
+  &.is-correct {
+    //Title
+    .question-title {
+      .bg-color-white;
+    }
+
+    //Quote
+    blockquote.question-quote {
+      border-left-color: white;
+    }
+
+    .bg-color-generic-green-opacity-14;
+  }
+  &.is-incorrect {
+    //Title
+    .question-title {
+      .bg-color-generic-red-lighten-10;
+    }
+
+    //Quote
+    blockquote.question-quote {
+      border-left-color: white;
+    }
+
+    .bg-color-generic-red-opacity-14;
+  }
+
+  //Hover
+  &:hover {
+    .z-depth-2;
+  }
+
+  //Title
+  .question-title {
+    transition: @transition-base-rule;
+    .padding-half;
+    .bg-color-white-darken-2;
+    .font-size-n;
+  }
+
+  //Quote
+  blockquote.question-quote {
+    transition: @transition-base-rule;
+    .font-size-l;
+    .margin-bottom-full;
+    font-style: italic;
+    font-weight: 700;
+    border-left-color: @color-generic-blue;
+  }
+
+  //Html
+  .question-html {
+
+    &:empty {
+      display: none;
+    }
+
+    .margin-bottom-full;
+    border: 3px solid @color-generic-blue;
+  }
+
+  //Container
+  .question-container {
+    transition: @transition-base-rule;
+    .padding-full;
+  }
+
+  transition: @transition-base-rule;
+  .bg-color-white;
+  .margin-bottom-double;
+
+}
+
+/*---- end Questions ----*/
+
+/*--- Playground ---*/
+.playground {
+
+  textarea.playground-code-input {
+    .font-size-n;
+    .bg-color-white;
+    min-height: 40vh;
+    font-family: monospace;
+    border: none;
+    width: 100%;
+    resize: none;
+    outline: none;
+  }
+
+  .padding-half;
+  .bg-color-white-darken-2;
+}
+
+/*--- end Playground ---*/

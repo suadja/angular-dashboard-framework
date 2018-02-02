@@ -1,0 +1,30 @@
+{
+  "name": "classify",
+  "version": "1.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.14.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-less": "^3.3.0",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-replace-task": "^0.11.0",
+    "gulp-useref": "^3.1.2",
+    "gulp-util": "^3.0.7",
+    "gulp-watch-less": "^1.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://sebamza17@bitbucket.org/sebamza17/classify.git"
+  },
+  "author": "SmplBlck",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/sebamza17/classify#readme",
+  "description": ""
+}

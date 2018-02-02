@@ -1,0 +1,66 @@
+/* 
+    Buttons CSS classes
+    Created on : 06/04/2016
+    Author     : SMPLBLCK/sebamza17
+*/
+
+//Base button
+.button {
+
+  //Sizes
+  &.button-big {
+    .padding-horizontal-full;
+    .padding-vertical-half;
+    font-weight: 700;
+  }
+
+  //Colors
+  &.button-color-generic-blue {
+    .bg-color-generic-blue;
+  }
+  &.button-color-generic-orange {
+    .bg-color-generic-orange;
+  }
+  &.button-color-generic-red {
+    .bg-color-generic-red;
+  }
+  &.button-color-generic-green {
+    .bg-color-generic-green;
+  }
+
+  //Icons
+  i {
+    .font-size-l;
+    .font-color-white;
+  }
+
+  //Actions on hover/focus
+  &:hover, &:focus {
+    .font-color-white;
+    .z-depth-1;
+  }
+
+  transition: all 200ms ease;
+  .padding-horizontal-half;
+  .padding-vertical-quarter;
+  .font-size-n;
+  .font-color-white;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+
+}
+
+//Links
+.link {
+
+  //Inline block
+  &.link-inline-block {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  cursor: pointer;
+}

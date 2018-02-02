@@ -1,0 +1,64 @@
+/*
+    Generic containers
+    Author: SMPLBLCK/sebamza17
+*/
+
+/*---- Viewport containers ----*/
+.container-viewport {
+
+  // Variation => Full viewport
+  &.container-viewport--full {
+    min-height: 100vh;
+  }
+
+  // Variation => Half viewport
+  &.container-viewport--half {
+    min-height: 50vh;
+  }
+
+}
+
+/*---- end Viewport containers ----*/
+
+/*---
+Height container
+    Apply this to any div to have a min height where scroll can go in.
+    Be aware that this class have calculations to leave space both for header and footer
+---*/
+.height-container {
+  @home-height-small-down: @navbar-height-small-down;
+  @home-height-medium-up: @navbar-height-medium-up;
+
+  // Variation => Navbar space on top
+  &.height-container--navbar-top-padding {
+    padding-top: @home-height-medium-up;
+    @media (max-width: @breakpoint-m) {
+      padding-top: @home-height-small-down;
+    }
+  }
+
+  // Variation => Full height (100vh)
+  &.height-container--full-height {
+    min-height: ~"calc(100vh - @{home-height-small-down})";
+    padding-bottom: @tabs-height-small-down + @padding-width / 2;
+
+    @media (min-width: @breakpoint-s) {
+      min-height: ~"calc(100vh - @{home-height-medium-up})";
+      padding-bottom: @tabs-height-medium-up + @padding-width / 2;
+    }
+  }
+
+  // Variation => Half height (50vh)
+  &.height-container--half-height {
+    min-height: ~"calc(50vh - @{home-height-small-down})";
+    padding-bottom: @tabs-height-small-down + @padding-width / 2;
+
+    @media (min-width: @breakpoint-s) {
+      min-height: ~"calc(50vh - @{home-height-medium-up})";
+      padding-bottom: @tabs-height-medium-up + @padding-width / 2;
+    }
+  }
+
+}
+
+/*--- end Height container ---*/

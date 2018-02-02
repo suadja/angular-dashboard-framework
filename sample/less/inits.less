@@ -1,0 +1,95 @@
+/*
+    Custom CSS initializations
+    Author: SMPLBLCK/sebamza17
+*/
+
+/*---- Template variables
+    Change these variables to make your template more customizable
+----*/
+
+// [Structure] - Navbar
+@navbar-height-small-down: 60px;
+@navbar-height-medium-up: 100px;
+@navbar-brand-height: 120px;
+
+// [Structure] - Tabs
+@tabs-height-small-down: 40px;
+@tabs-height-medium-up: @tabs-height-small-down * 2; //Same size for all screen sizes
+
+@brand-height: 120px;
+
+// [Structure] - Scrollbars
+@scrollbar-width: 6px;
+@scrollbar-height: 6px;
+
+/*---- end Template variables ----*/
+
+/*--- Base font size and style ---*/
+html {
+  font-family: @font-family-base;
+  color: @font-color-base;
+  font-size: 62.5%;
+
+  // All elements, with the same color
+  * {
+    color: @font-color-base;
+  }
+}
+
+body {
+  font-size: 1.4rem;
+}
+
+// Global icons
+i {
+  font-size: inherit;
+  color: inherit;
+}
+
+// Global anchors
+a {
+
+  color: @font-color-base;
+  transition: @transition-base-rule;
+
+  &:hover {
+    color: darken(@font-color-base, 20%);
+    text-decoration: none;
+  }
+
+}
+
+// Global headers
+h1 {
+  .font-size-giant;
+}
+
+h2 {
+  .font-size-xxl;
+}
+
+h3 {
+  .font-size-xl;
+}
+
+h4 {
+  .font-size-l;
+}
+
+/*--- end Base font size and style ---*/
+
+/*---- Scrollbars ----*/
+*::-webkit-scrollbar {
+  width: @scrollbar-width;
+  height: @scrollbar-height;
+}
+
+*::-webkit-scrollbar-track {
+  .bg-color-white-darken-2;
+}
+
+*::-webkit-scrollbar-thumb {
+  .bg-color-white-darken-8;
+}
+
+/*---- end Scrollbars ----*/

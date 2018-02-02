@@ -1,0 +1,31 @@
+/*
+    Base card
+    Author: SMPLBLCK/sebamza17
+*/
+
+.card {
+
+  transition: @transition-base-rule;
+  .z-depth-1;
+
+  &:hover {
+    .z-depth-2;
+  }
+
+  // Title
+  .card__title {
+    .padding-half;
+  }
+
+  // Image
+  .card__image {
+    .image-ratio;
+    background-position: center center;
+  }
+
+  // Content
+  .card__content {
+    .padding-full;
+  }
+
+}

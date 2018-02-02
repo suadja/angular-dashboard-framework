@@ -1,0 +1,30 @@
+/*
+    Base landing
+    Author: SMPLBLCK/sebamza17
+*/
+
+.landing {
+
+  position: relative;
+  min-height: 100vh;
+  min-width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+
+  // Variation => Has overlay(simple black opacity 50% overlay)
+  &.landing--has-overlay {
+
+    &:after {
+      .bg-color-black-opacity-10;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+  }
+
+}
