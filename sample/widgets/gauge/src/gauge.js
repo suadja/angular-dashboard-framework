@@ -13,41 +13,49 @@ angular.module('adf.widget.gauge', ['adf.provider'])
         }
       });
   })
-  .controller('gaugeController', function ($scope, $interval) {
+  .controller('gaugeController', function ($scope, $interval, $timeout) {
 
     console.log($scope.config);
+
+    $scope.config.uniqueId = Math.random().toString(36).substr(2, 9);
 
     var gauge = this;
 
     var opts = {
       angle: 0, // The span of the gauge arc
-      lineWidth: 0.44, // The line thickness
-      radiusScale: 0.96, // Relative radius
+      lineWidth: 0.3, // The line thickness
+      radiusScale: 0.8, // Relative radius
       pointer: {
-        length: 0.6, // // Relative to gauge radius
+        length: 0.70, // // Relative to gauge radius
         strokeWidth: 0.035, // The thickness
         color: '#000000' // Fill color
       },
       limitMax: false,     // If false, max value increases automatically if value > maxValue
       limitMin: false,     // If true, the min value of the gauge will be fixed
-      colorStart: '#6FADCF',   // Colors
+      colorStart: '#A3BD31',   // Colors
       colorStop: '#A3BD31',    // just experiment with them
       strokeColor: '#E0E0E0',  // to see which ones work best for you
       generateGradient: true,
       highDpiSupport: true,     // High resolution support
 
     };
-    var target = document.getElementById('gauge-test'); // your canvas element
-    var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
-    gauge.maxValue = $scope.config.max; // set max gauge value
-    gauge.setMinValue($scope.config.min);  // Prefer setter over gauge.minValue = 0
-    gauge.animationSpeed = 32; // set animation speed (32 is default value)
-    gauge.set($scope.config.value); // set actual value
+
+    var target;
+    var gauge;
+
+    $timeout(function () {
+      target = document.getElementById('gauge-' + $scope.config.uniqueId); // your canvas element
+      gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
+      gauge.maxValue = $scope.config.max; // set max gauge value
+      gauge.setMinValue($scope.config.min);  // Prefer setter over gauge.minValue = 0
+      gauge.animationSpeed = 32; // set animation speed (32 is default value)
+      gauge.set($scope.config.value); // set actual value
+    });
 
     // Mock interval to check the component
     $interval(function () {
       $scope.config.value = Math.random() * $scope.config.max;
       gauge.set($scope.config.value);
-    }, 1000);
+    }, 2000);
 
   });

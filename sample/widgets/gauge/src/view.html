@@ -1,13 +1,40 @@
-<div class="flex-wrapper flex-wrapper--justify-center">
-  <div>
-    <div class="text-center">
-      <h2 class="font-weight-bold">
-        {{config.value | number: 2}} {{config.unit}}
-      </h2>
-    </div>
+<div class="gauge-container" ng-class="{'gauge-container--vertical': config.isVertical}">
+
+  <!-- Data -->
+  <div class="padding-left-full">
     <div>
-      <canvas id="gauge-test"></canvas>
+      <span class="font-size-giant font-weight-bold font-color-brand-blue">
+        {{config.value | number: 0}}
+      </span>
+      <span class="font-size-l font-weight-bold font-color-brand-blue">
+        {{config.unit}}
+      </span>
+      <span class="padding-left-quarter font-weight-bold font-color-white-darken-6 font-size-xl">
+        {{(config.value / config.max) * 100 | number: 0}}%
+      </span>
     </div>
+    <div class="flex-wrapper flex-wrapper--align-center">
+      <i class="{{config.icon}} font-color-brand-green font-size-xxl--1"></i>
+      <div class="padding-left-quarter font-weight-bold font-size-xl font-color-white-darken-6">
+        {{config.title}}
+      </div>
+    </div>
+  </div>
+  <!-- end Data -->
+
+  <!-- Gauge -->
+  <div>
+
+    <!--<div class="text-center">-->
+    <!--<h2 class="font-weight-bold">-->
+    <!--{{config.value | number: 2}} {{config.unit}}-->
+    <!--</h2>-->
+    <!--</div>-->
+
+    <div>
+      <canvas ng-attr-id="{{'gauge-' + config.uniqueId}}"></canvas>
+    </div>
+
     <div class="padding-horizontal-full flex-wrapper flex-wrapper--align-center flex-wrapper--justify-space-between">
       <div class="text-center">
         <span class="font-weight-bold">
@@ -26,5 +53,8 @@
         </div>
       </div>
     </div>
+
   </div>
+  <!-- end Gauge -->
+
 </div>
