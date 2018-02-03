@@ -1,0 +1,30 @@
+<div class="flex-wrapper flex-wrapper--justify-center">
+  <div>
+    <div class="text-center">
+      <h2 class="font-weight-bold">
+        {{config.value | number: 2}} {{config.unit}}
+      </h2>
+    </div>
+    <div>
+      <canvas id="gauge-test"></canvas>
+    </div>
+    <div class="padding-horizontal-full flex-wrapper flex-wrapper--align-center flex-wrapper--justify-space-between">
+      <div class="text-center">
+        <span class="font-weight-bold">
+          {{config.min}}
+        </span>
+        <div>
+          {{config.unit}}
+        </div>
+      </div>
+      <div class="text-center">
+        <span class="font-weight-bold">
+          {{config.max}}
+        </span>
+        <div>
+          {{config.unit}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
