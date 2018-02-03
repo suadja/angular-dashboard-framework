@@ -1,59 +1,26 @@
-//Sidenav
-.sidenav-container {
-  width: 300px;
-  background-color: @color-brand-blue;
-  min-height: 100%;
-  .score-number {
-    position: relative;
-    transform: initial;
-    left: initial;
-    height: 100px;
-    width: 100px;
-    border: initial;
-  }
-}
-
-//Logo
-.nav-logo {
-  height: 30px;
-  & img {
-    max-width: 200px;
-    height: 100%;
-  }
-}
-
-//sidenav links
-.sidenav-list {
-  a {
-    color: white;
-    display: block;
-  .padding-vertical-quarter;
-  }
-  .padding-horizontal-full;
-}
-
-//Main content
-
-.top-nav {
-  .bg-color-white;
-  .padding-vertical-half;
-
-}
+/*
+    Dashboard cards
+    Author: SMPLBLCK/suadja
+*/
 
 .card-container {
+
   display: flex;
   transition: all 600ms ease-in-out;
+
   &.card-container--full {
     width: 100%
   }
+
   &.card-container--disabled {
     position: relative;
     filter: grayscale(100%);
     opacity: 0.7;
   }
+
 }
 
-//Card
+// Card
 .card-base {
   .width-full;
   .bg-color-white;
@@ -69,19 +36,19 @@
     .padding-vertical-half;
     .padding-horizontal-full;
   }
+
   .card-body {
     .bg-color-white;
     .padding-vertical-double;
     .padding-horizontal-full;
   }
+
 }
 
-
-//First 2 cards
+// First 2 cards
 .top-card {
   min-height: 200px;
 }
-
 
 .row.row--wrap {
   display: flex;
@@ -91,5 +58,3 @@
 div[class*="col-"].col--grow {
   //flex-grow: 1;
 }
-
-//Colors

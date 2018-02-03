@@ -1,0 +1,29 @@
+/*
+    Navbar
+    Author: SMPLBLCK/suadja
+*/
+
+@topbar-height: 61px;
+
+.optigo-navbar__container {
+  .margin-bottom-full;
+  .bg-color-white;
+  .padding-vertical-half;
+  position: fixed;
+  top: 0;
+  left: @sidenav-width;
+  z-index: 100;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  width: ~"calc(100% - @{sidenav-width})";
+
+  //Logo
+  .nav-logo {
+    height: 30px;
+    & img {
+      max-width: 200px;
+      height: 100%;
+    }
+  }
+
+}

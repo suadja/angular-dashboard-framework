@@ -27,7 +27,8 @@ angular.module('sample-01', ['adf', 'LocalStorageModule'])
 .controller('sample01Ctrl', function($scope, localStorageService){
 
   var name = 'sample-01';
-  var model = localStorageService.get(name);
+  // var model = localStorageService.get(name);
+  var model = null;
   if (!model) {
     // set default model for demo purposes
     model = {
@@ -95,6 +96,7 @@ angular.module('sample-01', ['adf', 'LocalStorageModule'])
   $scope.collapsible = false;
   $scope.maximizable = false;
   $scope.categories = true;
+  console.log($scope.model);
 
   $scope.$on('adfDashboardChanged', function (event, name, model) {
     localStorageService.set(name, model);

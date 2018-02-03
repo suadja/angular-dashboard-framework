@@ -55,37 +55,40 @@
 /*--- end Global Vars ---*/
 
 /*--- Inits ---*/
-@import "inits.less";
+@import "inits";
 
 /*--- Base (Global helpers) ---*/
-@import "base/backgrounds.less";
-@import "base/buttons.less";
-@import "base/flex.less";
-@import "base/fonts.less";
-@import "base/guards.less";
-@import "base/helpers.less";
+@import "base/backgrounds";
+@import "base/buttons";
+@import "base/flex";
+@import "base/fonts";
+@import "base/guards";
+@import "base/helpers";
 
 /*--- Common (Element helpers) ---*/
-@import "common/structural-shadow.less";
+@import "common/structural-shadow";
+
+/*--- Bricks ---*/
+@import "bricks/dashboard/dashboard-base";
+@import "bricks/navbar/navbar-base";
+@import "bricks/sidenav/sidenav-base";
 
 /*--- Components ---*/
-@import "components/card.less";
-@import "components/horizontal-separator.less";
-@import "components/landing.less";
-@import "components/spinner.less";
-@import "components/height-containers.less";
+@import "components/card";
+@import "components/horizontal-separator";
+@import "components/landing";
+@import "components/spinner";
+@import "components/height-containers";
 
 /*--- Views ---*/
-@import "views/preferences.less";
-@import "optigo/card-containers.less";
-@import "optigo/optigo-theme__panel.less";
-@import "optigo/optigo-navbar.less";
+@import "views/preferences";
+@import "optigo/optigo-theme__panel";
 
 /*--- ShameCSS - Credits to CSSwizardry ---*/
-@import "shame.less";
+@import "shame";
 
-/*--- Playground imports (Any .less file that contains external styles, not from Classify itself) ---*/
-@import "playground/theme-test.less";
-@import "playground/tests.less";
-@import "playground/wispro.less";
+/*--- Playground imports (Any  file that contains external styles, not from Classify itself) ---*/
+@import "playground/theme-test";
+@import "playground/tests";
+@import "playground/wispro";
 

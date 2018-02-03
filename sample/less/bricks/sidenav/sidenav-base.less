@@ -1,28 +1,9 @@
-//Navbar
-.optigo-navbar__container {
-  .margin-bottom-full;
-  position: fixed;
-  top: 0;
-  right:0;
-  z-index: 100;
-  border-bottom: 1px solid lightgray;
-  display: flex;
-}
+/*
+    Sidenav
+    Author: SMPLBLCK/suadja
+*/
 
-//Logo
-.nav-logo {
-  height: 30px;
-  & img {
-    max-width: 200px;
-    height: 100%;
-  }
-}
-
-.top-nav {
-  .bg-color-white;
-  .padding-vertical-half;
-
-}
+@sidenav-width: 300px;
 
 //sidenav links
 .sidenav-list {
@@ -34,11 +15,14 @@
   .padding-horizontal-full;
 }
 
-
 //Sidenav
-
 .optigo-sidebar__container {
-  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: @sidenav-width;
+  height: 100vh;
+  overflow: auto;
   background-color: @color-brand-blue;
 
   .optigo-sidebar__links-container {
@@ -70,5 +54,3 @@
     }
   }
 }
-
-//end Sidenav
