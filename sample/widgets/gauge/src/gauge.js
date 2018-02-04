@@ -37,8 +37,25 @@ angular.module('adf.widget.gauge', ['adf.provider'])
             strokeColor: '#E0E0E0',  // to see which ones work best for you
             generateGradient: true,
             highDpiSupport: true,     // High resolution support
-
         };
+
+        var dangerOpts = {
+            angle: 0, // The span of the gauge arc
+            lineWidth: 0.3, // The line thickness
+            radiusScale: 0.8, // Relative radius
+            pointer: {
+                length: 0.70, // // Relative to gauge radius
+                strokeWidth: 0.035, // The thickness
+                color: '#000000' // Fill color
+            },
+            limitMax: false,     // If false, max value increases automatically if value > maxValue
+            limitMin: false,     // If true, the min value of the gauge will be fixed
+            colorStart: '#A3BD31',   // Colors
+            colorStop: '#D44417',    // just experiment with them
+            strokeColor: '#E0E0E0',  // to see which ones work best for you
+            generateGradient: true,
+            highDpiSupport: true,     // High resolution support
+        }
 
         var target;
         var gauge;
@@ -61,5 +78,14 @@ angular.module('adf.widget.gauge', ['adf.provider'])
             $scope.config.value = Math.random() * $scope.config.max;
             gauge.set($scope.config.value);
         }, $scope.config.updateInterval);
+
+        $scope.$watch('config.value', function (newValue, oldValue) {
+            var percentage = (newValue * 100) / $scope.config.max;
+            if (percentage > 85) {
+                gauge.setOptions(dangerOpts);
+            } else {
+                gauge.setOptions(opts);
+            }
+        });
 
     });
