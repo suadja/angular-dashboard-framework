@@ -5,9 +5,15 @@
 
 .gauge-container {
 
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 500px;
+
+  @media (max-width: @breakpoint-l--2) {
+    flex-direction: column;
+  }
 
   // Variation => Vertical gauge container
   &.gauge-container--vertical {

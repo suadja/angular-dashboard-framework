@@ -1,10 +1,46 @@
-//Panel cards
+//Panel widget cards
+.widget.panel-default {
 
-.panel-default > .panel-heading {
-  background-color: @color-brand-green;
-  .panel-title {
-    color: white;
+  transition: all 400ms ease;
+  border-radius: initial;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1), 5px 5px 7px rgba(0, 0, 0, 0.02);
+
+  &:hover {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2), 5px 5px 7px rgba(0, 0, 0, 0.07);
   }
+
+  // Heading
+  & > .panel-heading {
+    border-radius: initial;
+    padding: 22px 30px;
+    background-color: @color-brand-green;
+
+    .panel-title {
+      .font-size-xl;
+      font-weight: 400;
+      color: white;
+    }
+  }
+
+  // Body
+  & > .panel-body {
+    border-radius: initial;
+  }
+
+}
+
+// Variation => Secundary
+.widget--secundary .widget.panel-default {
+
+  & > .panel-heading {
+    .bg-color-white;
+
+    .panel-title {
+      .font-color-white-darken-10;
+    }
+
+  }
+
 }
 
 .score-number {

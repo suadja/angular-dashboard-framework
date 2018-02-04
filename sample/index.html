@@ -24,165 +24,165 @@
 -->
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="dashboard sample app">
-  <meta name="author" content="Sebastian Sdorra">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="dashboard sample app">
+    <meta name="author" content="Sebastian Sdorra">
 
-  <title>Dashboard</title>
+    <title>Dashboard</title>
 
-  <!-- build:css css/sample.min.css -->
-  <!-- Bootstrap core CSS -->
-  <link href="components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- build:css css/sample.min.css -->
+    <!-- Bootstrap core CSS -->
+    <link href="components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
-  <!-- dashboard style -->
-  <link href="../dist/angular-dashboard-framework.css" rel="stylesheet">
-  <link href="widgets/clock/src/style.css" rel="stylesheet">
-  <link href="widgets/travis/dist/adf-widget-travis.css" rel="stylesheet">
-  <link href="../dist/styles.css" rel="stylesheet">
-  <!-- end build -->
+    <!-- dashboard style -->
+    <link href="../dist/angular-dashboard-framework.css" rel="stylesheet">
+    <link href="widgets/clock/src/style.css" rel="stylesheet">
+    <link href="widgets/travis/dist/adf-widget-travis.css" rel="stylesheet">
+    <link href="../dist/styles.css" rel="stylesheet">
+    <!-- end build -->
 
-  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-  <![endif]-->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
 
-  <!--[if lte IE 8]>
-  <script>
-    document.createElement('adf-dashboard');
-    document.createElement('adf-widget');
-    document.createElement('adf-widget-content');
-    document.createElement('adf-dashboard-row');
-    document.createElement('adf-dashboard-column');
+    <!--[if lte IE 8]>
+    <script>
+        document.createElement('adf-dashboard');
+        document.createElement('adf-widget');
+        document.createElement('adf-widget-content');
+        document.createElement('adf-dashboard-row');
+        document.createElement('adf-dashboard-column');
 
-    document.createElement('highchart');
-  </script>
-  <![endif]-->
+        document.createElement('highchart');
+    </script>
+    <![endif]-->
 
-  <!-- inlince css -->
-  <style type="text/css">
+    <!-- inlince css -->
+    <style type="text/css">
 
-    /* fixe for modal-backdrop*/
-    .modal-backdrop {
-      bottom: 0;
-      /* some fixes appear to use this, too: */
-      position: fixed;
-    }
-  </style>
+        /* fixe for modal-backdrop*/
+        .modal-backdrop {
+            bottom: 0;
+            /* some fixes appear to use this, too: */
+            position: fixed;
+        }
+    </style>
 </head>
 
 <body ng-app="sample">
 
 <div class="width-full bg-color-white-darken-2" style="min-height: 100vh;">
 
-  <!-- Sidebar -->
-  <div class="optigo-sidebar__container">
+    <!-- Sidebar -->
+    <div class="optigo-sidebar__container">
 
-    <!--Score number-->
-    <div class="width-full padding-horizontal-quarter flex-wrapper flex-wrapper--justify-center padding-vertical-full">
-      <div class="score-number">80%</div>
+        <!--Score number-->
+        <div class="width-full padding-horizontal-quarter flex-wrapper flex-wrapper--justify-center padding-vertical-full">
+            <div class="score-number">80%</div>
+        </div>
+        <!--end score number-->
+        <div class="optigo-sidebar__links-container">
+
+            <ul class="width-full">
+                <li>
+                    <a href="#">
+                        <i class="fa fa-dashboard fa-lg"></i>
+                        Network Health
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-gift fa-lg"></i>
+                        System
+                        <span class="arrow"></span>
+                    </a>
+                </li>
+
+                <ul>
+                    <li class="active"><a href="#">Unit Status</a></li>
+                    <li><a href="#">Config</a></li>
+                    <li><a href="#">Lasers/Redundancy</a></li>
+                    <li><a href="#">Bandwidth</a></li>
+                    <li><a href="#">Firmware</a></li>
+                    <li><a href="#">RSSI</a></li>
+                </ul>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-globe fa-lg"></i>
+                        Edge Switches
+                        <span class="arrow"></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-globe fa-lg"></i>
+                        Ports
+                        <span class="arrow"></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-globe fa-lg"></i>
+                        VLANs
+                        <span class="arrow"></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-globe fa-lg"></i>
+                        Devices
+                        <span class="arrow"></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-globe fa-lg"></i>
+                        Security
+                        <span class="arrow"></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-globe fa-lg"></i>
+                        Network Topology
+                        <span class="arrow"></span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
     </div>
-    <!--end score number-->
-    <div class="optigo-sidebar__links-container">
+    <!-- end Sidebar -->
 
-      <ul class="width-full">
-        <li>
-          <a href="#">
-            <i class="fa fa-dashboard fa-lg"></i>
-            Network Health
-          </a>
-        </li>
+    <!-- Base content -->
+    <div>
 
-        <li>
-          <a href="#">
-            <i class="fa fa-gift fa-lg"></i>
-            System
-            <span class="arrow"></span>
-          </a>
-        </li>
+        <!-- Navbar -->
+        <div ng-include="'bricks/navbar/index.html'"></div>
+        <!-- end Navbar -->
 
-        <ul>
-          <li class="active"><a href="#">Unit Status</a></li>
-          <li><a href="#">Config</a></li>
-          <li><a href="#">Lasers/Redundancy</a></li>
-          <li><a href="#">Bandwidth</a></li>
-          <li><a href="#">Firmware</a></li>
-          <li><a href="#">RSSI</a></li>
-        </ul>
+        <!--dashboard container-->
+        <div class="dashboard-container">
+            <div class="padding-full">
+                <div ng-view/>
+            </div>
+        </div>
+        <!-- end dashboard container -->
 
-        <li>
-          <a href="#">
-            <i class="fa fa-globe fa-lg"></i>
-            Edge Switches
-            <span class="arrow"></span>
-          </a>
-        </li>
-
-        <li>
-          <a href="#">
-            <i class="fa fa-globe fa-lg"></i>
-            Ports
-            <span class="arrow"></span>
-          </a>
-        </li>
-
-        <li>
-          <a href="#">
-            <i class="fa fa-globe fa-lg"></i>
-            VLANs
-            <span class="arrow"></span>
-          </a>
-        </li>
-
-        <li>
-          <a href="#">
-            <i class="fa fa-globe fa-lg"></i>
-            Devices
-            <span class="arrow"></span>
-          </a>
-        </li>
-
-        <li>
-          <a href="#">
-            <i class="fa fa-globe fa-lg"></i>
-            Security
-            <span class="arrow"></span>
-          </a>
-        </li>
-
-        <li>
-          <a href="#">
-            <i class="fa fa-globe fa-lg"></i>
-            Network Topology
-            <span class="arrow"></span>
-          </a>
-        </li>
-
-      </ul>
     </div>
-  </div>
-  <!-- end Sidebar -->
-
-  <!-- Base content -->
-  <div>
-
-    <!-- Navbar -->
-    <div ng-include="'bricks/navbar/index.html'"></div>
-    <!-- end Navbar -->
-
-    <!--dashboard container-->
-    <div class="dashboard-container">
-      <div class="padding-full">
-        <div ng-view/>
-      </div>
-    </div>
-    <!-- end dashboard container -->
-
-  </div>
-  <!-- end Base content -->
+    <!-- end Base content -->
 
 </div>
 
@@ -278,6 +278,9 @@
 <!-- gauge -->
 <script type="text/javascript" src="widgets/gauge/components/gauge/gauge.min.js"></script>
 <script type="text/javascript" src="widgets/gauge/src/gauge.js"></script>
+
+<!-- switches -->
+<script type="text/javascript" src="widgets/switches/src/switches.js"></script>
 
 <!-- inject:js -->
 <!-- endinject -->

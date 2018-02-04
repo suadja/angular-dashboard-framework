@@ -1,0 +1,75 @@
+/*
+    Switches
+    Author: SMPLBLCK/suadja
+*/
+@import "switch-status";
+
+.switch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // Size => Small
+  &.switch--size-small {
+    .switch__icon {
+      width: 40px;
+      height: 35px;
+    }
+  }
+
+  // Status => Warning
+  &.switch--status-warning {
+    .switch__status {
+      i {
+        .font-color-generic-orange;
+      }
+    }
+  }
+  // Status => Danger
+  &.switch--status-danger {
+    .switch__status {
+      i {
+        .font-color-generic-red;
+      }
+    }
+  }
+
+  // Name of the switch (left side)
+  .switch__name {
+    .padding-right-quarter;
+    .font-color-white-darken-10;
+    .font-size-n;
+    font-weight: bold;
+  }
+
+  // Switch symbol (icon)
+  .switch__icon {
+    background-image: url('../../sample/images/switch-icon.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    width: 60px;
+    height: 60px;
+    opacity: 0.6;
+  }
+
+  // Icon indicates status
+  .switch__status {
+    .bg-color-white;
+    border-radius: 50%;
+    padding: 3px;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-60%);
+    line-height: 0;
+
+    i {
+      .font-size-xxl;
+      .font-color-brand-green;
+    }
+
+  }
+
+}

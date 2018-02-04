@@ -1,0 +1,39 @@
+/*
+    Switches widget structure
+    Author: SMPLBLCK/suadja
+*/
+
+.switches-widget {
+
+  // Main wrapper
+  .switches-widget__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  // Status
+  .switches-widget__status {
+    .padding-horizontal-full;
+    width: 30%;
+    flex-shrink: 0;
+  }
+
+  // List of switches
+  .switches-widget__list {
+    .padding-horizontal-full;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .switch {
+      .margin-vertical-full;
+      .margin-horizontal-half;
+      max-width: 25%;
+      flex-shrink: 0;
+      flex-grow: 0;
+    }
+
+  }
+
+}
