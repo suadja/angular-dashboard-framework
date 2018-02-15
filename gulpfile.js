@@ -135,8 +135,8 @@ gulp.task('docs', function(){
 
 /** build sample **/
 gulp.task('install-widgets', function(){
-  // return gulp.src('sample/widgets/*/bower.json')
-  //            .pipe($.install());
+  return gulp.src('sample/widgets/*/bower.json')
+             .pipe($.install());
 });
 
 gulp.task('widget-templates', ['install-widgets'], function(){

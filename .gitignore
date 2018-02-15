@@ -3,7 +3,11 @@
 /sample/node_modules
 
 # bower
-/sample/components/
+!/sample/
+/sample/*
+!/sample/components
+/sample/components/*
+!/sample/components/gauge
 
 # gulp build
 /build/
